@@ -81,7 +81,24 @@
             margin-top: 30px; /* Removes default margin from the top of the paragraph if needed */
             padding-top: 30px; /* Ensures padding does not affect the layout */
         }
-
+        /* Media Query for smaller screens like mobile phones */
+@media (max-width: 768px) {
+    .new-image {
+        width: 50%; /* Larger percentage for images */
+    }
+    .text-section {
+        width: 50%; /* Adjusted width to match image width */
+    }
+    .other-images {
+        width: 100%; /* Images take full width on smaller screens */
+    }
+    .text-section h2 {
+        font-size: 18px; /* Smaller font size for title */
+    }
+    .text-section p {
+        font-size: 14px; /* Smaller font size for paragraph */
+    }
+}
     </style>
 </head>
 
