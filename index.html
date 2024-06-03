@@ -34,6 +34,54 @@
             font-weight: 100; /* Use the thin weight */
             
         }
+        /* Flex container setup */
+        .flex2 {
+            display: flex;
+            justify-content: center; /* Centers the flex items horizontally */
+        }
+
+        /* Image and text section styling */
+        .new-image {
+            width: 20%; /* Assuming each of the other images take up 50% */
+            margin-right: 5%; /* Adjust based on the exact layout requirements */
+        }
+        .text-section {
+            width: 20%; /* Adjust width to fill up the remaining space as needed */
+            padding: 0 20px; /* Adds padding inside the text section */
+            text-align: center; 
+        }
+
+        .other-images {
+            width: 50%;
+            display: block; /* Makes sure images are centered and occupy the specified width */
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+
+
+        /* Title and text styling */
+        h2 {
+            color: #282e62; /* Hexadecimal code for blue */
+            font-size: 44px; /* Larger text size for the title */
+            font-weight: bold; /* Makes the title bold */
+            margin-bottom: 32px; /* Increased gap between the title and the paragraph */
+            padding-bottom: 20px; /* Adding padding to ensure space is visible */
+            margin-top: 30px; /* Removes default margin from the top of the paragraph if needed */
+            padding-top: 30px; 
+        }
+
+
+        .text-section p {
+            font-size: 24px; /* Big, but smaller than the title */
+            margin-top: 30px; /* Removes default margin from the top of the paragraph if needed */
+            padding-top: 30px; /* Ensures padding does not affect the layout */
+        }
+
     </style>
 </head>
 
@@ -71,10 +119,19 @@
     <!-- Images section -->
     <!-- Images section -->
     <!-- Images section -->
-    <main class="w-full flex flex-col items-center mt-4">
-        <img src="images/menu_gr.jpg" alt="Description of Image 1" class="w-1/2 mx-auto">
-        <img src="images/menu_en.jpg" alt="Description of Image 2" class="w-1/2 mx-auto">
+    <main class="w-full flex2 flex-col items-center mt-4">
+        <div class="flex2 w-full items-start mb-4">
+            <img src="images/main.jpeg" alt="Description of New Image" class="new-image">
+            <div class="text-section">
+                <h2>όβεν</h2>
+                <p>My text will go here. This text occupies the space from the middle to where the other images end.</p>
+            </div>
+        </div>
+        <hr class="w-full mb-4"> <!-- Horizontal line as separator -->
+        <img src="images/menu_gr.jpg" alt="Description of Image 1" class="other-images">
+        <img src="images/menu_en.jpg" alt="Description of Image 2" class="other-images">
     </main>
+    
     
     <footer class="bg-white shadow p-4 mt-8">
         <div class="container mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-8">
