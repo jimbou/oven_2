@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>όβεν</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100; /* Use the thin weight */
+        }
+        /* Style for the map container */
+        #mapid { height: 300px; width: 80%; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <header class="bg-white shadow p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4 ml-20">
+                <div style="background-color: #282e62; color: white; padding: 1rem 2rem; font-size: 1.2rem; font-weight: 300;">όβεν</div>
+                <nav class="flex space-x-4">
+                    <a href="index.html" style="color: #282e62;" class="hover:underline">Αρχική</a>
+                    <a href="index_g.html" style="color: #282e62;" class="hover:underline">Γλυφάδα</a>
+                    <a href="index_v.html" style="color: #282e62;" class="underline">Βούλα</a>
+                    <a href="index_p.html" style="color: #282e62;" class="hover:underline">Προϊόντα</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4 mr-20">
+                <a href="https://www.facebook.com/ovenvoula/", target="_blank">
+                    <button class="text-blue-900 hover:text-blue-700">
+                        <img src="images/facebook.svg" class="h-8 w-8" alt="Facebook Icon">
+                    </button>
+                </a>
+                <a href="https://www.instagram.com/ovenvoula/?hl=en", target="_blank">
+                    <button class="text-blue-900 hover:text-blue-700">
+                        <img src="images/insta.svg" class="h-8 w-8" alt="Instagram Icon">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="w-full flex flex-col items-center mt-4">
+        <div class="text-center my-2">
+            <h2>Store Address</h2>
+            <p>1234 Street Name, VOULA, State, ZIP</p>
+        </div>
+        <div class="text-center my-2">
+            <h2>Opening Hours</h2>
+            <p>Monday - Friday: 9:00 AM - 9:00 PM</p>
+            <p>Saturday - Sunday: 10:00 AM - 8:00 PM</p>
+        </div>
+        <div class="text-center my-2">
+            <h2>Contact Details</h2>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@ourstore.com</p>
+        </div>
+        <!-- Map container added below -->
+        <div id="mapid"></div>
+    </main>
+    <footer class="bg-white shadow p-4 mt-8">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-8">
+            <div>
+                <p class="text-gray-700">Detailed address information here</p>
+            </div>
+            <div>
+                <p class="text-gray-700">Additional address or important info here</p>
+            </div>
+            <div>
+                <p class="text-gray-700">Links and other resources</p>
+            </div>
+        </div>
+        <div class="container mx-auto text-center mt-4">
+            <p class="text-gray-500 mt-4">&copy; 2024, όβεν </p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var mymap = L.map('mapid').setView([37.8382451,23.7684981], 13); // Replace latitude and longitude with actual values
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+        }).addTo(mymap);
+        var marker = L.marker([37.8382451,23.7684981]).addTo(mymap); // Same coordinates as above
+        marker.bindPopup("<b>όβεν βούλα</b><br>Leof. Vasileos Pavlou 104, Voula 166 73, Greece").openPopup();
+    </script>
+</body>
+</html>
