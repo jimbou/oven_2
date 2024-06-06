@@ -63,44 +63,46 @@
     </header>
     <main class="w-full flex flex-col items-center mt-4">
         <div class="text-center my-2">
-            <h2>Store Address</h2>
-            <p>1234 Street Name, GLYFADA, State, ZIP</p>
+            <h2 class="underline">Διεύθυνση</h2>
+            <p>Αρτέμιδος 9, Γλυφάδα 166 74, Αττική</p>
         </div>
         <div class="text-center my-2">
-            <h2>Opening Hours</h2>
-            <p>Monday - Friday: 9:00 AM - 9:00 PM</p>
-            <p>Saturday - Sunday: 10:00 AM - 8:00 PM</p>
+            <h2 class="underline">Ωράριο</h2>
+            <p>Δευτέρα - Παρασκευή: 7:00 πμ - 5:00 μμ</p>
+            <p>Σάββατο: 10:00 πμ - 4:00 μμ</p>
+            <p>Κυριακή: Κλειστά</p>
         </div>
         <div class="text-center my-2">
-            <h2>Contact Details</h2>
-            <p>Phone: (123) 456-7890</p>
+            <h2 class="underline">Στοιχεία Επικοινωνίας</h2>
+            <p>Τηλέφωνο: (123) 456-7890</p>
             <p>Email: contact@ourstore.com</p>
         </div>
         <!-- Map container added below -->
         <div id="mapid"></div>
     </main>
-    <footer class="bg-white shadow p-4 mt-8 border-t-2 border-gray-150">
+    <footer class="bg-white shadow p-4 mt-8 border-t-2 border-gray-150" >
         <div class="container mx-auto grid grid-cols-3 gap-4 items-center justify-items-center text-center">
-            <div>
+            <div class="col">
                 <p class="text-gray-900 underline">Βούλα</p>
-                <p class="text-gray-700">Leof. Vasileos Pavlou 104</p>
-                <p class="text-gray-700"> Voula 166 73, Greece</p>
+                <p class="text-gray-700">Λεωφ. Βασιλέως Παύλου 104</p>
+                <p class="text-gray-700"> Βούλα 166 73, Αττική</p>
                 
                 <p class="text-gray-700"> </p>
                 <p class="text-gray-900 underline">Γλυφάδα</p>
-                <p class="text-gray-700">Artemidos 9</p>
-                <p class="text-gray-700">Glifada 166 74, Greece</p>
+                <p class="text-gray-700">Αρτέμιδος 9</p>
+                <p class="text-gray-700">Γλυφάδα 166 74, Αττική</p>
 
             </div>
-            <div>
-                <p class="text-gray-900">Opening Hours:</p>
+            <div class="col">
+                <p class="text-gray-900 underline">Ωράριο:</p>
                 <ul class="text-gray-700" style="list-style-type: none; padding-left: 0;">
-                    <li>Mon - Fri: 9:00 AM - 5:00 PM</li>
-                    <li>Saturday: 10:00 AM - 4:00 PM</li>
-                    <li>Sunday: Closed</li>
+                    <li>Δευτέρα - Παρασκευή: 7:00 πμ - 5:00 μμ</li>
+                    <li>Σάββατο: 10:00 πμ - 4:00 μμ</li>
+                    <li>Κυριακή: Κλειστά</li>
                 </ul>
+                <!-- <p class="text-gray-500 mt-4">&copy; 2024, όβεν </p> -->
             </div>
-            <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="col" style="display: flex; flex-direction: column; gap: 10px;">
                 <!-- Social media links here -->
                 <a href="https://www.instagram.com/ovenvoula" class="text-gray-700">
                     <i class="fab fa-instagram"></i>
@@ -112,8 +114,8 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            
         </div>
+
     </footer>
     <div class="container mx-auto text-center mt-4 border-gray-150 pb-2 ">
         <p class="text-gray-500 mt-4">&copy; 2024, όβεν </p>
@@ -126,7 +128,7 @@
             maxZoom: 18,
         }).addTo(mymap);
         var marker = L.marker([37.8617309,23.7565258]).addTo(mymap); // Same coordinates as above
-        marker.bindPopup("<b>όβεν γλυφάδα</b><br>Artemidos 9, Glifada 166 74, Greece").openPopup();
+        marker.bindPopup("<b>όβεν Γλυφάδα</b><br>Αρτέμιδος 9, Γλυφάδα 166 74").openPopup();
     </script>
 </body>
 </html>
